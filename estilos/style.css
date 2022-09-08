@@ -108,3 +108,14 @@ body{
         border-radius: 10px;
         border: 1px solid #0A3871;
 }
+
+footer{
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+.invisible{
+    opacity: 0%;
+}
