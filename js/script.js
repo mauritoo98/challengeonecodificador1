@@ -1,14 +1,14 @@
 var boton = document.querySelector(".encriptar");
 var botondesencripta = document.querySelector(".desencriptar");
-const botoncopia = document.querySelector(".copiar")
+const botoncopia = document.querySelector(".copiar");
 
 
 boton.addEventListener("click", function () {
-    var texto = document.querySelector("#texto").;
+    var texto = document.querySelector("#texto");
     var imagen = document.querySelector(".muñeco-alura");
     var mensajeError = document.querySelector(".mensaje-error");
     var texto1 = texto.value;
-    var textarray = Array.from(texto1); /*hago el texto en array*/
+    var textarray = Array.from(texto1.toLowerCase()); /*hago el texto en array*/
     /*llamo funcion comprueba*/
 
     if (textarray.length == 0) {
@@ -30,18 +30,6 @@ botondesencripta.addEventListener("click", function () {
     var texto1 = texto.value;
     var texencriptado = document.querySelector(".mensaje"); /*tomo el parrafo ya para convertir*/
     texencriptado.textContent = (desencripta(texto1));
-
-    if (textarray.length == 0) {
-        imagen.classList.remove("invisible");
-        mensajeError.textContent = "Ningún mensaje fue encontrado";
-        mensajeError.classList.remove("invisible");
-    }
-    else {
-        var texencriptado = document.querySelector(".mensaje"); /*tomo el parrafo ya para convertir*/
-        texencriptado.textContent = (compruebaletra(textarray)).join("");
-        mensajeError.classList.add("invisible");
-        imagen.classList.add("invisible");
-    };
 
 })
 
